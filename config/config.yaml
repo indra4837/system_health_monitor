@@ -1,0 +1,11 @@
+nodes:
+  - system_health_monitor
+  - joy_node
+  - teleop_twist_node
+
+normal_pub_rate:
+  - "0.0"
+  - "28.43"
+  - "0.0"
+
+warning_percentage: 0.7

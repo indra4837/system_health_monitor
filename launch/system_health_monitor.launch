@@ -1,0 +1,11 @@
+<launch>
+  <rosmon name="/rosmon/state"/>
+  <arg name="config_filepath" default="$(find system_health_monitor)/config/config.yaml"/>
+  <!-- system_health_monitor_node -->
+  <node pkg="system_health_monitor" name="system_health_node" type="system_health_monitor" output="screen" respawn="true">
+    <rosparam command="load" file="$(arg config_filepath)"/>
+  </node>
+  <!-- teleop_twist_joy_node -->
+  <include file="$(find teleop_twist_joy)/launch/teleop.launch"/>
+  <!-- include file="$(find rosbag_recorder)/launch/rosbag_recorder.launch"/> -->
+</launch>
