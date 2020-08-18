@@ -1,6 +1,6 @@
 # System Health Monitor
 
-This package contains a system_health_node to monitor status of running nodes and restarts them (if required).
+This package contains a system_health_node to monitor status of running nodes and restarts them (by calling service).
 
 [ROS node sample graph](rosgraph.png)
 
